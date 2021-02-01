@@ -18,3 +18,32 @@ let max = [["0", 0], ["1", 3], ["2", 5], ["3", 5], ["4",2]].reduce(
 const exported = max.map(element => Number(element[0]));
 console.log( max );
 
+
+let obj = {
+    members: [],
+    pushTokens: []
+}
+const follows = [
+    {
+        member: 'member11',
+        pushToken: 'pushToken11'
+    },
+    {
+        member: 'member12',
+        pushToken: 'pushToken12'
+    },
+    {
+        member: 'member13',
+        pushToken: 'pushToken13'
+    },
+    {
+        member: 'member14',
+        pushToken: 'pushToken14'
+    },
+]
+
+follows.reduce((acc, cur) => {
+    acc.members.push(cur.member);
+    acc.pushTokens.push(cur.pushToken);
+    return acc;
+}, obj)
