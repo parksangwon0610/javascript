@@ -30,6 +30,16 @@ const asyncFunction = async () => {
 
 asyncFunction().then(console.log);
 
+asyncFunction()
+.then(result =>{
+    console.log('1 : ' + result);
+    return asyncFunction();
+})
+.then(result => {
+    console.log('2 : ' + result);
+    return asyncFunction();
+})
+
 function1(true)
     .then(result => {
         result;
